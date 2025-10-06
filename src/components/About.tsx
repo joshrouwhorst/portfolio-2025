@@ -8,7 +8,7 @@ export default function About() {
         <h2 className="text-4xl font-bold mb-6 font-young-serif">About</h2>
         <div className="flex flex-col gap-4">
           <p>
-            {`I’m Josh Rouwhorst, a full‑stack software engineer and web developer based in Grand Rapids, Michigan. I love building things on the web and have a soft spot for great photography and the technologies that power delightful online experiences.`}
+            {`I’m Josh Rouwhorst, a full‑stack software engineer and web developer based in Grand Rapids, Michigan. I love working with diverse teams to build beautiful, functional applications that solve real problems.`}
           </p>
 
           <h3 className="text-2xl font-bold mt-6 mb-4">My Story</h3>
