@@ -22,7 +22,7 @@ export default function Home() {
             <About />
           </div>
         </div>
-
+        <div id="projects" />
         <Project
           title="BskyBackup"
           link="https://github.com/joshrouwhorst/BskyBackup"
