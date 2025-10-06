@@ -2,6 +2,12 @@ export const LINKEDIN_URL = 'https://www.linkedin.com/in/joshrouwhorst/'
 export const GITHUB_URL = 'https://github.com/joshrouwhorst'
 export const EMAIL = 'jrouwhorst0@gmail.com'
 
+export const MENU_ITEMS = [
+  { name: 'About', href: '#about' },
+  { name: 'Projects', href: '#projects' },
+  { name: 'Contact', href: '#contact' },
+]
+
 export const TECH_CLOUD = [
   { text: 'NextJS', weight: 4 },
   { text: 'React', weight: 4 },

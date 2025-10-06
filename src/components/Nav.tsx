@@ -2,13 +2,7 @@
 import React, { useState } from 'react'
 import { useScroll } from '../providers/ScrollProvider'
 import { Hamburger } from 'lucide-react'
-
-const MENU_ITEMS = [
-  { name: 'Home', href: '#home' },
-  { name: 'About', href: '#about' },
-  { name: 'Projects', href: '#projects' },
-  { name: 'Contact', href: '#contact' },
-]
+import { MENU_ITEMS } from '../config'
 
 const Nav: React.FC = () => {
   const { position } = useScroll()
