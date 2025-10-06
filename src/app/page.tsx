@@ -15,7 +15,7 @@ export default function Home() {
       <div className="font-sans">
         <Nav />
         <Hero />
-        <div className="flex flex-col lg:flex-row-reverse gap-4 justify-center items-center container mx-auto">
+        <div className="flex flex-col lg:flex-row-reverse gap-4 md:gap-10 justify-center items-center container mx-auto py-20">
           <div className="w-full lg:w-1/3">
             <WordCloud words={TECH_CLOUD} />
           </div>
