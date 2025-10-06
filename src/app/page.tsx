@@ -7,6 +7,7 @@ import Testimonials from '@/components/Testimonials'
 import Contact from '@/components/Contact'
 import { TECH_CLOUD } from '@/config'
 import WordCloud from '@/components/WordCloud'
+import Button from '@/components/ui/Button'
 
 export default function Home() {
   return (
@@ -84,8 +85,17 @@ export default function Home() {
         {/* <Testimonials /> */}
         <Contact />
 
-        <footer className="text-sm text-gray-500 py-10 text-center font-mono">
-          &copy; {new Date().getFullYear()} Josh Rouwhorst. All rights reserved.
+        <footer className="w-full flex flex-col items-center justify-center bg-sky-50 text-sky-900 py-10">
+          <Button
+            href="https://github.com/joshrouwhorst/portfolio-2025"
+            color="sky"
+          >
+            Website Source Code
+          </Button>
+          <div className="text-sm text-gray-500 py-10 text-center font-mono">
+            &copy; {new Date().getFullYear()} Josh Rouwhorst. All rights
+            reserved.
+          </div>
         </footer>
       </div>
     </ScrollProvider>

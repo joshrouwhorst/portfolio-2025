@@ -40,21 +40,26 @@ export default function WordCloud({ words }: WordCloudProps) {
   }
 
   return (
-    <div className="flex flex-wrap justify-center gap-4 p-4 max-w-xl mx-auto">
-      {words
-        .sort((a, b) => b.weight - a.weight)
-        .map((word) => {
-          return (
-            <span
-              key={word.text}
-              className={`${getFontClass(word.weight)} ${getColorClass(
-                word.weight
-              )} font-bold transition-transform transform hover:scale-110 cursor-pointer`}
-            >
-              {word.text}
-            </span>
-          )
-        })}
+    <div className="max-w-xl mx-auto">
+      <h3 className="text-2xl font-bold mb-4 text-center font-mono">
+        Frequently Used Technologies
+      </h3>
+      <div className="flex flex-wrap justify-center gap-4 p-4 max-w-xl mx-auto">
+        {words
+          .sort((a, b) => b.weight - a.weight)
+          .map((word) => {
+            return (
+              <span
+                key={word.text}
+                className={`font-mono font-bold ${getFontClass(
+                  word.weight
+                )} ${getColorClass(word.weight)}`}
+              >
+                {word.text}
+              </span>
+            )
+          })}
+      </div>
     </div>
   )
 }
