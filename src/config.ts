@@ -29,4 +29,5 @@ export const TECH_CLOUD = [
   { text: 'PostgreSQL', weight: 1 },
   { text: 'MongoDB', weight: 1 },
   { text: 'Bluesky API', weight: 1 },
+  { text: 'AT Protocol', weight: 1 },
 ]

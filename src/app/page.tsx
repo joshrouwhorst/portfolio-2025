@@ -35,17 +35,17 @@ export default function Home() {
             'Tailwind CSS',
             'Docker',
             'GitHub Copilot',
+            'AT Protocol',
             'Bluesky API',
           ]}
           className="bg-sky-500 text-sky-100"
         >
-          Built a personal backup tool for Bluesky that exports and archives
-          posts and media from a user account. Implemented as a command-line
-          Node.js application (TypeScript) that fetches timeline data via the AT
-          Protocol, stores posts and attachments locally (with deduplication),
-          and provides configurable export options and retry/error handling for
-          robust operation. Ideal for creating portable, long-term archives of a
-          Bluesky account.
+          Built a backup tool for Bluesky intended for installation on a
+          personal NAS server. This tool archives data from a user account as
+          well as draft and post scheduling according to themes. This tool
+          fetches timeline data via the AT Protocol, stores posts and
+          attachments locally (with deduplication). Focused on privacy and
+          security.
         </Project>
 
         <Project
