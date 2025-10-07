@@ -51,6 +51,24 @@ const youngSerif = Young_Serif({
 export const metadata: Metadata = {
   title: 'Josh Rouwhorst - Senior Software Engineer & Web Developer',
   description: "Josh Rouwhorst's portfolio showcasing projects and skills.",
+  themeColor: '#00a6f4',
+  creator: 'Josh Rouwhorst',
+  openGraph: {
+    title: 'Josh Rouwhorst - Senior Software Engineer & Web Developer',
+    description: "Josh Rouwhorst's portfolio showcasing projects and skills.",
+    url: 'https://joshr.work',
+    siteName: 'Josh Rouwhorst Portfolio',
+    images: [
+      {
+        url: 'https://joshr.work/social-banner.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Josh Rouwhorst Portfolio',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
 }
 
 export default function RootLayout({
