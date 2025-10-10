@@ -68,17 +68,6 @@ export default function About() {
             deliver robust, maintainable solutions that meet business goals.
           </li>
         </ul>
-
-        <h3 className="text-2xl font-bold mt-6 mb-4">Background</h3>
-        <ul className="list-disc list-inside space-y-2 text-base text-sky-800">
-          <li>
-            Extensive experience with Sitefinity and the .NET ecosystem from my
-            time at Springthrough
-          </li>
-          <li>
-            Representative clients: Aptiv, Celebration Cinema, Corewell Health
-          </li>
-        </ul>
       </div>
     </section>
   )
