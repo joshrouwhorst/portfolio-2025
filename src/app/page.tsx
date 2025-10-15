@@ -41,15 +41,14 @@ export default function Home() {
           className="bg-sky-500 text-sky-100"
         >
           Built a backup tool for Bluesky intended for installation on a
-          personal NAS server. This tool archives data from a user account as
-          well as draft and post scheduling according to themes. This tool
-          fetches timeline data via the AT Protocol, stores posts and
-          attachments locally (with deduplication). Focused on privacy and
-          security.
+          personal NAS server. The app automatically backs up profile posts,
+          images, and video and stores them locally. It automatically prunes old
+          posts. And it allows you to draft new posts and set up schedules
+          according to themes. Focused on privacy and security.
         </Project>
 
         <Project
-          title="Automotive Part Manufacturer Website"
+          title="Automotive Part Manufacturer"
           link="https://aptiv.com"
           image="/projects/aptiv.png"
           stack={['Sitefinity', '.NET', 'Azure', 'Angular', 'AngularJS']}
@@ -66,23 +65,24 @@ export default function Home() {
           availability and compliance needs.
         </Project>
         <Project
-          title="Theater Chain Website"
+          title="Cinema Chain"
           link="https://celebrationcinema.com"
           image="/projects/celebration.png"
           stack={['Sitefinity', '.NET', 'Azure', 'Angular', 'AngularJS']}
           className="bg-sky-900 text-sky-100"
         >
-          Built and launched website using Progress Sitefinity CMS, hosted on
-          Microsoft Azure, and integrated with a custom ticketing system.
-          Delivered responsive, user-focused templates and reusable content
-          components in Sitefinity; implemented secure API integrations for
-          real-time showtimes and ticketing; and configured CI/CD pipelines and
-          scalable Azure hosting for high availability. Optimized performance,
-          accessibility, and analytics tracking to support peak traffic and
-          improve conversion.
+          Built and launched this website, as well as companion websites for a
+          concert venue and restaurant. This utilized Progress Sitefinity CMS,
+          hosted on Microsoft Azure, and integrated with a custom ticketing POS
+          system. Delivered responsive, user-focused templates and reusable
+          content components in Sitefinity; implemented secure API integrations
+          for real-time showtimes and ticketing; and configured CI/CD pipelines
+          and scalable Azure hosting for high availability. Optimized
+          performance, accessibility, and analytics tracking to support peak
+          traffic and improve conversion.
         </Project>
 
-        {/* <Testimonials /> */}
+        <Testimonials />
         <Contact />
 
         <footer className="w-full flex flex-col items-center justify-center bg-sky-50 text-sky-900 py-10">

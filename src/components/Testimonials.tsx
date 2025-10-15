@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from 'react'
 
+const SLIDE_TIME = 5 * 1000
+
 interface TestimonialProps {
   quote: string
   name: string
@@ -11,25 +13,29 @@ interface TestimonialProps {
 
 const testimonialRecords: TestimonialProps[] = [
   {
-    quote:
-      'Josh is a highly skilled developer with a keen eye for detail. His ability to translate complex requirements into functional and user-friendly applications is impressive. He consistently delivers high-quality work on time and is a pleasure to collaborate with.',
-    name: 'Jane Smith',
-    title: 'Senior Developer at TechCorp',
-    url: 'https://www.linkedin.com/in/janesmith',
+    quote: `Josh has been instrumental in executing project support and enhancements, 
+      as well as contributing to the development of applications that replaced legacy systems. His
+experience debugging and supporting legacy applications has been particularly valuable, as he
+brings both patience and technical acumen to these often-challenging situations.`,
+    name: 'Mitch Kett',
+    title: 'Senior Engineering Manager at Mutually Human',
+    url: 'https://www.linkedin.com/in/%F0%9F%92%BB-mitch-kett-99a485b/',
   },
   {
-    quote:
-      'Working with Josh was a fantastic experience. He brought innovative ideas to the table and demonstrated exceptional problem-solving skills. His dedication to the project and proactive communication made a significant difference in our success.',
-    name: 'John Doe',
-    title: 'Project Manager at InnovateX',
-    url: 'https://www.linkedin.com/in/johndoe',
+    quote: `Josh worked well with clients and Product Managers to clarify requirements, demo
+functionality, and keep projects moving forward even when time or budget was limited. He
+was dependable, easy to work with, and contributed steadily to our team's success.`,
+    name: 'Lori Mackson',
+    title: 'VP of Custom Software at Mutually Human',
+    url: 'https://www.linkedin.com/in/lorimackson/',
   },
   {
-    quote:
-      'Josh is a talented developer who consistently goes above and beyond. His technical expertise, combined with his collaborative approach, makes him an invaluable asset to any team. I highly recommend him for any development project.',
-    name: 'Emily Johnson',
-    title: 'CTO at WebSolutions',
-    url: 'https://www.linkedin.com/in/emilyjohnson',
+    quote: `Working with Josh was genuinely enjoyable. He’s a great listener who can quickly identify
+both the real problems and the hidden opportunities in any situation. His ability to cut
+through the noise and deliver effective solutions was a huge asset to our team.`,
+    name: 'Kris Coleman',
+    title: 'Director of Platform Engineering at TestifySec',
+    url: 'https://www.linkedin.com/in/kris-codeman',
   },
 ]
 
@@ -38,11 +44,26 @@ export default function Testimonials() {
   const timeoutRef = useRef<NodeJS.Timeout | null>(null)
   const testimonialCount = testimonialRecords.length
 
+  const pauseSlideshow = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current)
+      timeoutRef.current = null
+    }
+  }
+
+  const resumeSlideshow = () => {
+    if (!timeoutRef.current) {
+      timeoutRef.current = setTimeout(() => {
+        setCurrent((prev) => (prev + 1) % testimonialCount)
+      }, SLIDE_TIME)
+    }
+  }
+
   useEffect(() => {
     timeoutRef.current && clearTimeout(timeoutRef.current)
     timeoutRef.current = setTimeout(() => {
       setCurrent((prev) => (prev + 1) % testimonialCount)
-    }, 5000)
+    }, SLIDE_TIME)
     return () => {
       timeoutRef.current && clearTimeout(timeoutRef.current)
     }
@@ -57,7 +78,11 @@ export default function Testimonials() {
         <h2 className="text-3xl md:text-4xl font-bold mb-6 font-young-serif">
           From People Who Know Me
         </h2>
-        <div className="relative w-full mx-auto">
+        <div
+          className="relative w-full mx-auto"
+          onMouseEnter={pauseSlideshow}
+          onMouseLeave={resumeSlideshow}
+        >
           <div className="py-10 px-6 md:px-20 border-9 border-sky-500 min-h-[600px] md:min-h-[400px] md:h-[400px] flex flex-col items-center">
             <div className="rounded-lg transition-shadow duration-300 flex-1 justify-center flex flex-col">
               <p className="text-lg italic mb-4">
