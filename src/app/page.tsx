@@ -1,13 +1,13 @@
-import Nav from '../components/Nav'
-import Hero from '../components/Hero'
-import { ScrollProvider } from '@/providers/ScrollProvider'
 import About from '@/components/About'
+import Contact from '@/components/Contact'
 import Project from '@/components/Project'
 import Testimonials from '@/components/Testimonials'
-import Contact from '@/components/Contact'
-import { TECH_CLOUD } from '@/config'
 import WordCloud from '@/components/WordCloud'
 import Button from '@/components/ui/Button'
+import { TECH_CLOUD } from '@/config'
+import { ScrollProvider } from '@/providers/ScrollProvider'
+import Hero from '../components/Hero'
+import Nav from '../components/Nav'
 
 export default function Home() {
   return (
@@ -25,9 +25,9 @@ export default function Home() {
         </div>
         <div id="projects" />
         <Project
-          title="BskyBackup"
-          link="https://github.com/joshrouwhorst/BskyBackup"
-          image="/projects/bskybackup.png"
+          title="Post&Prune"
+          link="https://github.com/joshrouwhorst/PostAndPrune"
+          image="/projects/postandprune.png"
           stack={[
             'NextJS',
             'Node.js',
